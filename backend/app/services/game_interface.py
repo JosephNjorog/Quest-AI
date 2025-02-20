@@ -1,4 +1,3 @@
-# backend/app/services/game_interface.py
 from typing import Dict, Any, List, Optional
 from web3 import Web3
 from app.core.config import settings
