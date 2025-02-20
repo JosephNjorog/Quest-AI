@@ -1,8 +1,3 @@
-"""
-Wallet Service for QuestMind AI Agent
-Manages user wallet connections, security, and authentication
-"""
-
 import os
 import json
 import secrets
