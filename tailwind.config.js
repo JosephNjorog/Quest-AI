@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {  
   content: [
     './pages/**/*.{js,ts,jsx,tsx}', // Include all pages
     './components/**/*.{js,ts,jsx,tsx}', // Include all components
@@ -22,7 +23,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/forms'), // This plugin can remain as-is
-  ],
+  plugins: [],
 };
