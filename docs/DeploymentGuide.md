@@ -165,16 +165,6 @@ npx hardhat run scripts/configure.js --network mainnet
 2. **Deploy During Low-Gas Periods:** Monitor gas prices and deploy during periods of lower network activity
 3. **Optimize Constructor Parameters:** Initialize contracts with as many parameters as possible in the constructor
 
-## Security Checklist
-
-Before mainnet deployment, ensure:
-
-- [x] All contracts have been audited by a third party
-- [x] Access control has been properly implemented and tested
-- [x] Emergency withdrawal functions work correctly
-- [x] Gas limits have been estimated for all functions
-- [x] Contract interactions have been thoroughly tested
-- [x] Ownership has been transferred to a secure multisig wallet
 
 ## Monitoring After Deployment
 
