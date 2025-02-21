@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Card } from '../components/common/Card';
-import { Button } from '../components/common/Button';
-import { Input } from '../components/common/Input';
+import Card from '../components/common/Card';
+import Button from '../common/Button';
+import Input from '../common/Input';
 import { Settings as SettingsIcon, Save, Bell, Shield, Wallet, Bot } from 'lucide-react';
 
 const Settings = () => {

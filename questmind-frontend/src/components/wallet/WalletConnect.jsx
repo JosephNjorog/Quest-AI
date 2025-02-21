@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Wallet, Shield, ExternalLink, AlertCircle } from 'lucide-react';
-import { Card } from '../common/Card';
-import { Button } from '../common/Button';
+import Card from '../common/Card';
+import Button from '../common/Button';
 import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
 
 const WalletConnect = () => {

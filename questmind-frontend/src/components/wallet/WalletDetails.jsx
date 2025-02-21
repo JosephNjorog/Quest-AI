@@ -1,6 +1,6 @@
 import React from 'react';
 import { useWallet } from '../../context/WalletContext';
-import { Card } from '../common/Card';
+import Card from '../common/Card';
 import { formatAddress, formatBalance } from '../../utils/formatters';
 
 const WalletDetails = () => {

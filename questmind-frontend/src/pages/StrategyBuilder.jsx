@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useAgent } from '../context/AgentContext';
-import { Card } from '../components/common/Card';
+import Card from '../components/common/Card';
 
 const StrategyBuilder = () => {
   const { executeCommand, settings, setSettings } = useAgent();

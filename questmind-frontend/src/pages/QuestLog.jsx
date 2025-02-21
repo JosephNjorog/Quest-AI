@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Card } from '../components/common/Card';
-import { Input } from '../components/common/Input';
+import Card from '../components/common/Card';
+import Input from '../common/Input';
 import { Search, Filter, Clock, Star, Award } from 'lucide-react';
 
 const QuestLog = () => {

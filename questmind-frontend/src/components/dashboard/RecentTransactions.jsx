@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from '../common/Card';
+import Card from '../common/Card';
 import { ArrowUpRight, ArrowDownRight, Clock } from 'lucide-react';
 
 const RecentTransactions = () => {

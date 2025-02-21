@@ -1,5 +1,5 @@
 import React from 'react';
-import { useWallet } from '../../hooks/useWallet';
+import useWallet from '../../hooks/useWallet';
 import { useGame } from '../../hooks/useGameData';
 import { truncateAddress } from '../../utils/formatters';
 

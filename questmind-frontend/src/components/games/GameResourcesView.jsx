@@ -1,6 +1,6 @@
 import React from 'react';
 import { useGame } from '../../context/GameContext';
-import { Card } from '../common/Card';
+import Card from '../common/Card';
 
 const GameResourcesView = () => {
   const { resources, isLoading } = useGame();

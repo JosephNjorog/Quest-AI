@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Send, Loader } from 'lucide-react';
-import { Button } from '../common/Button';
-import { Input } from '../common/Input';
+import Button from '../common/Button';
+import Input from '../common/Input';
 
 const CommandInput = () => {
   const [command, setCommand] = useState('');

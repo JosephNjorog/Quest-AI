@@ -1,6 +1,6 @@
 import React from 'react';
 import { useGame } from '../context/GameContext';
-import { Card } from '../components/common/Card';
+import Card from '../components/common/Card';
 
 const HeroManagement = () => {
   const { heroes, updateHero } = useGame();
