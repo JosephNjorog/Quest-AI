@@ -10,3 +10,11 @@ export const retry = async (fn, retries = 3, delay = 1000) => {
     }
   }
 };
+
+export const debounce = (fn, ms = 300) => {
+  let timeoutId;
+  return (...args) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn(...args), ms);
+  };
+};
