@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 
+declare global {
+  interface Window {
+    ethereum?: any;
+  }
+}
 interface WalletConnectorProps {
   onConnect: (address: string) => void;
 }
@@ -33,7 +38,7 @@ const WalletConnector: React.FC<WalletConnectorProps> = ({ onConnect }) => {
       const chainId = network.chainId;
       
       // Avalanche C-Chain ID is 43114
-      if (chainId !== 43114n) {
+      if (chainId !== BigInt(43114)) {
         await switchToAvalanche();
       }
 
