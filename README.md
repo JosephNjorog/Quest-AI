@@ -131,6 +131,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 
 - Website: [https://questmind.io](https://questmind.io)
-- Twitter: [@QuestMindAI](https://twitter.com/QuestMindAI)
-- Discord: [QuestMind Community](https://discord.gg/questmind)
-- Email: info@questmind.io
