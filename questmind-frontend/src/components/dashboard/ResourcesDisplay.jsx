@@ -62,3 +62,5 @@ const ResourcesDisplay = () => {
     </Card>
   );
 };
+
+export default ResourcesDisplay;
