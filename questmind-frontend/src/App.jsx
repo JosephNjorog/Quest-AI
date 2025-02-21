@@ -1,79 +1,27 @@
-import React, { useEffect } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
-import { useWallet } from './hooks/useWallet';
-
-// Layout
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { WalletProvider } from './context/WalletContext';
+import { AgentProvider } from './context/AgentContext';
+import { GameProvider } from './context/GameContext';
 import Layout from './components/layout/Layout';
+import AppRoutes from './routes';
 
-// Pages
-import Dashboard from './pages/Dashboard';
-import HeroManagement from './pages/HeroManagement';
-import QuestLog from './pages/QuestLog';
-import Settings from './pages/Settings';
-import StrategyBuilder from './pages/StrategyBuilder';
-
-// Components
-import WalletConnect from './components/wallet/WalletConnect';
-
-function App() {
-  const { isConnected } = useWallet();
-
-  // Protected route wrapper
-  const ProtectedRoute = ({ children }) => {
-    if (!isConnected) {
-      return <Navigate to="/" replace />;
-    }
-    return children;
-  };
-
+const App = () => {
   return (
-    <div className="min-h-screen bg-dark-800 text-white">
-      {!isConnected ? (
-        <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-dark-900 to-dark-700 p-4">
-          <WalletConnect />
-        </div>
-      ) : (
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route 
-              path="/heroes" 
-              element={
-                <ProtectedRoute>
-                  <HeroManagement />
-                </ProtectedRoute>
-              } 
-            />
-            <Route 
-              path="/quests" 
-              element={
-                <ProtectedRoute>
-                  <QuestLog />
-                </ProtectedRoute>
-              } 
-            />
-            <Route 
-              path="/strategy" 
-              element={
-                <ProtectedRoute>
-                  <StrategyBuilder />
-                </ProtectedRoute>
-              } 
-            />
-            <Route 
-              path="/settings" 
-              element={
-                <ProtectedRoute>
-                  <Settings />
-                </ProtectedRoute>
-              } 
-            />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-        </Layout>
-      )}
-    </div>
+    <Router>
+      <div className="min-h-screen bg-dark-800 text-gray-100">
+        <WalletProvider>
+          <AgentProvider>
+            <GameProvider>
+              <Layout>
+                <AppRoutes />
+              </Layout>
+            </GameProvider>
+          </AgentProvider>
+        </WalletProvider>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
